@@ -1,22 +1,10 @@
 <script>
-	import { 
-		Icon, 
-		Button, 
-		Menu, 
-		List, 
-		ListItem, 
-		NavigationDrawer,
-		Overlay,
-		Footer,
-	} from 'svelte-materialify';
-
-	import * as S from 'svelte-materialify';
-
 	import Router from 'svelte-spa-router';
 	import Home from './routes/home.svelte';
 	import Showpage from './routes/showpage.svelte';
 	import AppBar from './components/AppBar.svelte';
 	import Navigation from './components/Navigation.svelte';
+	import Footer from './components/Footer.svelte'
 
 	let active = false;
 
@@ -35,13 +23,8 @@
 
 		<Router {routes}/>
 
-		<Footer padless class="indigo theme--dark justify-center flex-column">
-		<div class="indigo lighten-1 pa-2 text-center" style="width:100%">
-			2020 -
-			<b>Svelte Materialify</b>
-		</div>
-	</Footer>
-</div>
+		<Footer/>
+	</div>
 </main>
 
 <style>
