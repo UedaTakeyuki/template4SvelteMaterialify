@@ -7,13 +7,10 @@
 		Menu, 
 		List, 
 		ListItem, 
-		NavigationDrawer,
-		Overlay,
-		Footer,
   } from 'svelte-materialify';
   
   export let active = false;
-  
+
   function click(){active = !active}
 
 </script>
