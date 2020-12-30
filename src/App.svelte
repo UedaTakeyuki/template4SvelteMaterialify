@@ -1,7 +1,6 @@
 <script>
 	import { 
 		MaterialApp, 
-		AppBar, 
 		Icon, 
 		Button, 
 		Menu, 
@@ -16,8 +15,9 @@
 	import * as S from 'svelte-materialify';
 
 	import Router from 'svelte-spa-router';
-	import Home from './routes/home.svelte'
-	import Showpage from './routes/showpage.svelte'
+	import Home from './routes/home.svelte';
+	import Showpage from './routes/showpage.svelte';
+	import AppBar from './components/AppBar.svelte';
 
 	let active = false;
 
@@ -26,31 +26,10 @@
 			'/showpage/': Showpage,
 	}
 
-	function click(){active = !active}
-
 </script>
 
 <main>
-	<AppBar>
-		<div slot="icon">
-			<Button fab depressed on:click={click}>
-				<Icon class="mdi mdi-menu" />
-			</Button>
-		</div>
-		<span slot="title">Title</span>
-		<div style="flex-grow:1" />
-		<Button>Item</Button>
-		<Menu right>
-			<div slot="activator">
-				<Button fab depressed>
-					<Icon class="mdi mdi-dots-vertical" />
-				</Button>
-			</div>
-			<ListItem>Item 1</ListItem>
-			<ListItem>Item 2</ListItem>
-			<ListItem>Item 3</ListItem>
-		</Menu>
-	</AppBar>
+	<AppBar bind:active={active}/>
 
 <div style="position:relative;">
   <NavigationDrawer absolute {active}>
