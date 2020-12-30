@@ -1,6 +1,5 @@
 <script>
 	import { 
-		MaterialApp, 
 		Icon, 
 		Button, 
 		Menu, 
@@ -11,7 +10,6 @@
 		Footer,
 	} from 'svelte-materialify';
 
-	let theme = 'light';
 	import * as S from 'svelte-materialify';
 
 	import Router from 'svelte-spa-router';
@@ -32,25 +30,17 @@
 <main>
 	<AppBar bind:active={active}/>
 
-<div style="position:relative;">
-	<Navigation bind:active={active}/>
+	<div style="position:relative;">
+		<Navigation bind:active={active}/>
 
-	<MaterialApp theme="{theme}">
-		<slot />
-	</MaterialApp>
+		<Router {routes}/>
 
-	<S.Button>These Are</S.Button>
-
-	<S.Button>The Same Thing</S.Button>
-
-	<Router {routes}/>
-
-	<Footer padless class="indigo theme--dark justify-center flex-column">
-  <div class="indigo lighten-1 pa-2 text-center" style="width:100%">
-    2020 -
-    <b>Svelte Materialify</b>
-  </div>
-</Footer>
+		<Footer padless class="indigo theme--dark justify-center flex-column">
+		<div class="indigo lighten-1 pa-2 text-center" style="width:100%">
+			2020 -
+			<b>Svelte Materialify</b>
+		</div>
+	</Footer>
 </div>
 </main>
 
