@@ -1,7 +1,5 @@
 <script>
 	import Router from 'svelte-spa-router';
-	import Home from './routes/home.svelte';
-	import Showpage from './routes/showpage.svelte';
 	import AppBar from './components/AppBar.svelte';
 	import Navigation from './components/Navigation.svelte';
 	import Footer from './components/Footer.svelte'
@@ -9,12 +7,6 @@
 
 	let active = false;
 
-/*
-	const routes = {
-			'/': Home,
-			'/showpage/': Showpage,
-	}
-*/
 </script>
 
 <main>
@@ -37,6 +29,7 @@
 </main>
 
 <style>
+/* for sticky footer */
 main {
     width: 100%;
     height: 100%;
@@ -44,7 +37,6 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
 }
-
 .appbar {
     flex-shrink: 0;
 }

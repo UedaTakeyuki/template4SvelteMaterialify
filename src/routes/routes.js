@@ -1,5 +1,5 @@
-import Home from './home.svelte'
-import Showpage from './showpage.svelte'
+import Home from '../views/home.svelte'
+import Showpage from '../views/showpage.svelte'
 
 const routes = {
   '/': Home,
