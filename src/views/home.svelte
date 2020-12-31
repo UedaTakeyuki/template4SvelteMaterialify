@@ -2,5 +2,8 @@
   import {link} from 'svelte-spa-router'
 </script>
 
-<h1>Homepage</h1>
-<a href="/showpage" use:link>showpageへ</a>
+<h1>Home</h1>
+<ol>
+  <li><a href="/account" use:link>Account</a></li>
+  <li><a href="/admin" use:link>Admin</a></li>
+</ol>

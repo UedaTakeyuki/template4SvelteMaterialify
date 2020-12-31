@@ -1,9 +1,11 @@
+import Account from '../views/account.svelte'
+import Admin from '../views/admin.svelte'
 import Home from '../views/home.svelte'
-import Showpage from '../views/showpage.svelte'
 
 const routes = {
   '/': Home,
-  '/showpage/': Showpage,
+  '/account/': Account,
+  '/admin/': Admin,
 }
 
 export {routes};
