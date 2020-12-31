@@ -5,14 +5,16 @@
 	import AppBar from './components/AppBar.svelte';
 	import Navigation from './components/Navigation.svelte';
 	import Footer from './components/Footer.svelte'
+	import { routes } from './routes/routes'
 
 	let active = false;
 
+/*
 	const routes = {
 			'/': Home,
 			'/showpage/': Showpage,
 	}
-
+*/
 </script>
 
 <main>
