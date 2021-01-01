@@ -8,6 +8,7 @@
 		NavigationDrawer,
 		Overlay,
   } from 'svelte-materialify';
+  import {link} from 'svelte-spa-router' 
   
   export let active = false;
 
@@ -17,23 +18,23 @@
 
 <NavigationDrawer absolute {active}>
   <List>
-    <ListItem>
+    <ListItem on:click={click}>
       <span slot="prepend">
         <Icon class="mdi mdi-view-dashboard" />
       </span>
-      Dashboard
+      <a href="/" use:link>Home</a>
     </ListItem>
-    <ListItem>
+    <ListItem on:click={click}>
       <span slot="prepend">
         <Icon class="mdi mdi-account-box" />
       </span>
-      Account
+      <a href="/account" use:link>Account</a>
     </ListItem>
-    <ListItem>
+    <ListItem on:click={click}>
       <span slot="prepend">
         <Icon class="mdi mdi-gavel" />
       </span>
-      Admin
+      <a href="/admin" use:link>Admin</a>
     </ListItem>
   </List>
 </NavigationDrawer>

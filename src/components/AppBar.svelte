@@ -8,6 +8,7 @@
 		List, 
 		ListItem, 
   } from 'svelte-materialify';
+  import {link, push} from 'svelte-spa-router' 
   
   export let active = false;
 
@@ -23,15 +24,19 @@
   </div>
   <span slot="title">Title</span>
   <div style="flex-grow:1" />
-  <Button>Item</Button>
+  <Button><a href="/" use:link>Home</a></Button>
+  <Button><a href="/account" use:link>Account</a></Button>
+  <Button><a href="/admin" use:link>Admin</a></Button>
   <Menu right>
     <div slot="activator">
       <Button fab depressed>
         <Icon class="mdi mdi-dots-vertical" />
       </Button>
     </div>
-    <ListItem>Item 1</ListItem>
-    <ListItem>Item 2</ListItem>
-    <ListItem>Item 3</ListItem>
+    <List>
+      <ListItem on:click={() => console.log("Home")}>Home</ListItem>
+      <ListItem on:click={() => console.log("Account")}>Account</ListItem>
+      <ListItem on:click={() => console.log("Admin")}>Admin</ListItem>
+    </List>
   </Menu>
 </AppBar>
