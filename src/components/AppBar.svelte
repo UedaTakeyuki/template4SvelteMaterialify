@@ -7,6 +7,7 @@
 		Menu, 
 		List, 
 		ListItem, 
+    Overlay,
   } from 'svelte-materialify';
   import {link, push} from 'svelte-spa-router' 
   
@@ -16,7 +17,7 @@
 
 </script>
 
-<AppBar>
+<AppBar style="position: relative;z-index: 1;">
   <div slot="icon">
     <Button fab depressed on:click={click}>
       <Icon class="mdi mdi-menu" />
