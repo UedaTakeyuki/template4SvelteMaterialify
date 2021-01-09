@@ -14,7 +14,7 @@
 		<AppBar bind:active={active}/>
 	</div>
 
-	<div style="position:relative;" on:click={() => console.log("body")} class="body">
+	<div style="position:relative;" on:click|self class="body">
 
 		<Navigation bind:active={active}/>
 

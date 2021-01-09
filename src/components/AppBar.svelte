@@ -17,7 +17,7 @@
 
 </script>
 
-<AppBar>
+<AppBar style="position:relative;z-index:1;">
   <div slot="icon">
     <Button fab depressed on:click={click}>
       <Icon class="mdi mdi-menu" />
@@ -35,9 +35,9 @@
       </Button>
     </div>
     <List>
-      <ListItem on:click={() => console.log("Home")}>Home</ListItem>
-      <ListItem on:click={() => console.log("Account")}>Account</ListItem>
-      <ListItem on:click={() => console.log("Admin")}>Admin</ListItem>
+      <ListItem on:click={() => push('/')}>Home</ListItem>
+      <ListItem on:click={() => push('/account')}>Account</ListItem>
+      <ListItem on:click={() => push('/admin')}>Admin</ListItem>
     </List>
   </Menu>
 </AppBar>
