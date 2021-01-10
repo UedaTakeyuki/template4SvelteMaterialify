@@ -6,7 +6,7 @@
 		List, 
 		ListItem, 
 		NavigationDrawer,
-		Overlay,
+//		Overlay,
   } from 'svelte-materialify';
   import {link} from 'svelte-spa-router' 
   
@@ -16,7 +16,7 @@
 
 </script>
 
-<NavigationDrawer absolute {active}>
+<NavigationDrawer absolute {active} style="height:200px" class="primary-color theme--dark">
   <List>
     <ListItem on:click={click}>
       <span slot="prepend">
@@ -38,4 +38,4 @@
     </ListItem>
   </List>
 </NavigationDrawer>
-<Overlay index={1} {active} on:click={click} opacity={0.98} color="blue" absolute style="width:300px"/>
+<!-- <Overlay index={1} {active} on:click={click} opacity={0.98} color="blue" absolute style="width:300px"/> -->
